@@ -1,0 +1,30 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.row {
+  text-align: center;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  color: #000000;
+  text-align: center;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  text-align: center;
+}
+
+.title {
+  text-align: center
+}
+
+a {
+  color: #00B7FF;
+}
