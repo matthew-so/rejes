@@ -1,0 +1,41 @@
+﻿<files><attributes><name>Impact of Electron-Electron Cusp on Configuration Interaction Energies</name><abstract>The effect of the electron-electron cusp on the convergence of configuration
+  interaction (CI) wave functions is examined. By analogy with the
+  pseudopotential approach for electron-ion interactions, an effective
+  electron-electron interaction is developed which closely reproduces the
+  scattering of the Coulomb interaction but is smooth and finite at zero
+  electron-electron separation. The exact many-electron wave function for this
+  smooth effective interaction has no cusp at zero electron-electron separation.
+  We perform CI and quantum Monte Carlo calculations for He and Be atoms, both
+  with the Coulomb electron-electron interaction and with the smooth effective
+  electron-electron interaction. We find that convergence of the CI expansion of
+  the wave function for the smooth electron-electron interaction is not
+  significantly improved compared with that for the divergent Coulomb interaction
+  for energy differences on the order of 1 mHartree. This shows that, contrary to
+  popular belief, description of the electron-electron cusp is not a limiting
+  factor, to within chemical accuracy, for CI calculations.</abstract><data>http://arxiv.org/pdf/cond-mat/0102536v1</data><id>0</id></attributes><attributes><name>KnightCap: A chess program that learns by combining TD(lambda) with
+  game-tree search</name><abstract>In this paper we present TDLeaf(lambda), a variation on the TD(lambda)
+  algorithm that enables it to be used in conjunction with game-tree search. We
+  present some experiments in which our chess program ``KnightCap'' used
+  TDLeaf(lambda) to learn its evaluation function while playing on the Free
+  Internet Chess Server (FICS, fics.onenet.net). The main success we report is
+  that KnightCap improved from a 1650 rating to a 2150 rating in just 308 games
+  and 3 days of play. As a reference, a rating of 1650 corresponds to about level
+  B human play (on a scale from E (1000) to A (1800)), while 2150 is human master
+  level. We discuss some of the reasons for this success, principle among them
+  being the use of on-line, rather than self-play.</abstract><data>http://arxiv.org/pdf/cs/9901002v1</data><id>1</id></attributes><attributes><name>Local Light Field Fusion: Practical View Synthesis with Prescriptive
+  Sampling Guidelines</name><abstract>We present a practical and robust deep learning solution for capturing and
+  rendering novel views of complex real world scenes for virtual exploration.
+  Previous approaches either require intractably dense view sampling or provide
+  little to no guidance for how users should sample views of a scene to reliably
+  render high-quality novel views. Instead, we propose an algorithm for view
+  synthesis from an irregular grid of sampled views that first expands each
+  sampled view into a local light field via a multiplane image (MPI) scene
+  representation, then renders novel views by blending adjacent local light
+  fields. We extend traditional plenoptic sampling theory to derive a bound that
+  specifies precisely how densely users should sample views of a given scene when
+  using our algorithm. In practice, we apply this bound to capture and render
+  views of real world scenes that achieve the perceptual quality of Nyquist rate
+  view sampling while using up to 4000x fewer views. We demonstrate our
+  approach's practicality with an augmented reality smartphone app that guides
+  users to capture input images of a scene and viewers that enable realtime
+  virtual exploration on desktop and mobile platforms.</abstract><data>http://arxiv.org/pdf/1905.00889v1</data><id>2</id></attributes></files>

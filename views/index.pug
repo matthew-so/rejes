@@ -8,7 +8,7 @@ block content
     button(type="button" onclick="window.location.reload()") refresh
   script.
     var accessLink1 = function() {
-        window.open('#{title[0].data}');
+        window.open('#{books[0].data}');
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
@@ -18,11 +18,11 @@ block content
         };
         xhttp.open("POST", "/");
         xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        xhttp.send("click=" + #{title[0].id});
+        xhttp.send("click=" + #{books[0].id});
         window.location.reload();
     }
     var accessLink2 = function() {
-        window.open('#{title[1].data}');
+        window.open('#{books[1].data}');
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
@@ -32,11 +32,11 @@ block content
         };
         xhttp.open("POST", "/");
         xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        xhttp.send("click=" + #{title[1].id});
+        xhttp.send("click=" + #{books[1].id});
         window.location.reload();
     }
     var accessLink3 = function() {
-        window.open('#{title[2].data}');
+        window.open('#{books[2].data}');
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
@@ -46,20 +46,20 @@ block content
         };
         xhttp.open("POST", "/");
         xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        xhttp.send("click=" + #{title[2].id});
+        xhttp.send("click=" + #{books[2].id});
         window.location.reload();
     }
   div(class="row")
     div(class="column")
-      h2 #{title[0].name}
-      h2 #{title[0].abstract}
-      button(onclick = 'accessLink1()') link to paper
+      h2 #{books[0].name}
+      h2 #{books[0].abstract}
+      button(onclick = 'accessLink1()') Link to paper
     div(class="column")
-      h2 #{title[1].name}
-      h2 #{title[1].abstract}
-      button(onclick = 'accessLink2()') link to paper
+      h2 #{books[1].name}
+      h2 #{books[1].abstract}
+      button(onclick = 'accessLink2()') Link to paper
     div(class="column")
-      h2 #{title[2].name}
-      h2 #{title[2].abstract}
-      button(onclick = 'accessLink3()') link to paper
+      h2 #{books[2].name}
+      h2 #{books[2].abstract}
+      button(onclick = 'accessLink3()') Link to paper
 

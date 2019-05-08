@@ -3,7 +3,6 @@ var router       = express.Router();
 var fs           = require('fs');
 var xml2js       = require('xml2js');
 var parser       = new xml2js.Parser();
-const request = require('request');
 const sqlite3 = require('sqlite3').verbose();
 const bodyParser = require('body-parser');
 
@@ -24,7 +23,7 @@ function curateSelection (result) {
 router.get('/', function(req, res, next) {
     var ip = req.connection.remoteAddress;
 
-    let db = new sqlite3.Database('./db/chinook.db', (err) => {
+    let db = new sqlite3.Database('./db/userinfo.db', (err) => {
         if (err) {
             return console.error(err.message);
         }
@@ -56,14 +55,17 @@ router.get('/', function(req, res, next) {
         console.log('Closed the database connection.');
     });
 
-    var xmlfile = __dirname + "/../research_papers/test.xml";
+    var xmlfile = __dirname + "/../research_papers/papers.xml";
     fs.readFile(xmlfile, "utf-8", function (error, text) {
         if (error) {
             throw error;
         } else {
             parser.parseString(text, function (err, result) {
                 var books = curateSelection(result);
-                res.render('index', { title:  books, ip: ip});
+                for (let i = 0; i < books.length; i++) {
+                    books[i].abstract = "Abstract: " + books[i].abstract;
+                }
+                res.render('index', { title: "Rejes: Explore Research Papers", books: books, ip: ip});
             });
         }
     });
@@ -72,7 +74,7 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
     var ip = req.connection.remoteAddress;
 
-    let db = new sqlite3.Database('./db/chinook.db', (err) => {
+    let db = new sqlite3.Database('./db/userinfo.db', (err) => {
         if (err) {
             return console.error(err.message);
         }

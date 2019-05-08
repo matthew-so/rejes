@@ -1,7 +1,0 @@
-BEGIN TRANSACTION;
-CREATE TABLE IF NOT EXISTS "actions" (
-	"ip"	INTEGER NOT NULL,
-	"move"	BLOB
-);
-INSERT INTO "actions" VALUES ('192.168.1.1','[]');
-COMMIT;
